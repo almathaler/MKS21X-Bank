@@ -1,13 +1,13 @@
 public class Driver {
   public static void main(String[] args) {
-    BankAccount a = new BankAccount(0.00, 123);
+    BankAccount a = new BankAccount(0.00, 123, "abc");
     //constructor for new BankAccount
     System.out.println(a.getBalance() + " : This is your current balance");
     // should print "0.00 : This is your current balance"
     System.out.println(a.getAccountID() + " : This is your accountID");
     // should print "123 : This is your accountID")
     //we will set pw even though there is no getPassword:
-    a.setPassword("abc");
+    //a.setPassword("abc");
     System.out.println(a);
     //this should print 123 0.00;
     if (a.deposit(124.98)) {

@@ -4,9 +4,10 @@ public class BankAccount {
   private int accountID;
   private String password;
   //constructors
-  public BankAccount(double x, int y) {
+  public BankAccount(double x, int y, String z) {
     balance = x;
     accountID = y;
+    password =z;
   }
   //public BankAccount(String z) {
   //  password = z;
@@ -18,9 +19,9 @@ public class BankAccount {
   public int getAccountID() {
     return accountID;
   }
-  public void setPassword(String z) {
-    password = z;
-  }
+  //public void setPassword(String z) {
+  //  password = z;
+  //}
   public String toString() {
     return accountID + "\t" + "" + balance;
   }
@@ -42,4 +43,26 @@ public class BankAccount {
       return true;
     }
   }
+  private boolean authenticate(String password) {
+    if (this.password == password) {
+      return true;
+    }
+    return false;
+  }
+  public boolean transferTo(BankAccount other, double amount, String password) {
+    if (authenticate(password)) {
+    }
+    else {
+      return false;
+    }
+  }
 }
+
+
+
+
+
+
+
+
+
