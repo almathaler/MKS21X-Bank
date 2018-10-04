@@ -33,5 +33,11 @@ public class DriverBankAccount{
       System.out.println();
       cashAmount *= 2;
     }
+    if (b2.transferTo(b1, 340.00, "abcasdg23")) {
+      System.out.println("Succesfully transfered 340.00 from" + " " + b2.getAccountID() + " " + "to" + " " + b1.getAccountID());
+    }
+    else {
+      System.out.println("Failed to transfer 340.00 from" + " " + b2.getAccountID() + " " + "to" + " " + b1.getAccountID());
+    }
   }
 }
